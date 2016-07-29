@@ -122,6 +122,7 @@ aggr
 ## 60 2012-11-29  7047
 ## 61 2012-11-30    NA
 ```
+
 2. Make a histogram of the total number of steps taken each day
 
 
@@ -130,6 +131,7 @@ hist(aggr$step, breaks=5, main="Total Steps Taken Each Day", xlab="Step")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+
 3. Calculate and report the mean and median of the total number of steps taken per day
 
 
@@ -137,6 +139,7 @@ hist(aggr$step, breaks=5, main="Total Steps Taken Each Day", xlab="Step")
 uncleanDataMean <- as.integer(mean(aggr$step, na.rm=TRUE))
 uncleanDataMedian <- as.integer(median(aggr$step, na.rm=TRUE))
 ```
+
 - The calculated mean is **10766**
 - The calculated median is **10765**
 
@@ -152,12 +155,14 @@ plot(aggr$interval, aggr$step, type="l", main="Average Number Of Steps Taken Acr
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 
 ```r
 maxStepsInterval <- aggr[aggr$step==max(aggr$step),]
 ```
+
 - The interval containing maximum number of steps is **835**  
 
 ## Imputing missing values
@@ -223,6 +228,7 @@ hist(aggr$step, breaks=5, main="Total Number Of Steps Taken Each Day", xlab="Int
 mn <- as.integer(mean(aggr$step))
 mdn <- as.integer(median(aggr$step))
 ```
+
 - The calculated mean is **10821**
 - The calculated median is **11015**
 
@@ -257,7 +263,9 @@ head(activityDataSet)
 ## 5 34.6349206349206 2012-10-01       20 weekday
 ## 6 34.6349206349206 2012-10-01       25 weekday
 ```
+
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
+
 
 ```r
 # Select out data falls in weekday from activityDataSet
