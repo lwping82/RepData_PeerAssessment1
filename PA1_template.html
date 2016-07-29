@@ -268,7 +268,7 @@ dayWithEmptyData$meanStep &lt;- apply(dayWithEmptyData, 1, function(x) {
   return(mean(t$steps))
 })</code></pre>
 <ul>
-<li>The strategy adopted to replace each record with “NA” value with the average of total steps taken grouped by same day across the experiment. Reason being, human beings are unique. Each of us tend to have a fixed standard tasks that we need to carry out each day(EG. our occupational activities, hobbies, etc), and we tend to put those activities into a well organized schedule. Therefore, majority of us will repeatedly performing almost the same activities on the same day(Assuming there was no unexpected event occured).</li>
+<li>The strategy adopted to replace each record with “NA” value is to replace them with the average of total steps taken grouped by same day across the experiment. Reason being, human beings are unique. Each of us tend to have a fixed standard tasks that we need to carry out each day(EG. our occupational activities, hobbies, etc), and we tend to put those activities into a well organized schedule. Therefore, majority of us will repeatedly performing almost the same activities on the same day(Assuming there was no unexpected event occured).</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li>Create a new dataset that is equal to the original dataset but with the missing data filled in.</li>
